@@ -11,7 +11,9 @@
         "esModuleInterop": true,    //para poder trabajar tanto con modules como con commonjs
         "declaration": true,
         "experimentalDecorators": true, //estos dos son para q Typescript no pete con el uso de decoradores de sequelize para los modelos
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "target": "es2020",
+        "module":"commonjs"
     },
     "include" : ["src/**/*.ts"],     //los archivoa que ha de buscar para compilar
     "exclude": ["src/**/*test.ts"] //para que no compile los tests en el código de produccción
