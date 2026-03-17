@@ -1,14 +1,9 @@
 import { Router } from 'express'
 import { createProduct, getAllProducts, getProductById, updateProduct, updateAvailability, deleteProduct } from './handlers/product';
 import { body, param } from 'express-validator'
-import { handleInputErrors } from './middleware';
+import { handleInputErrors } from './middleware'
 
 const router = Router();
-
-// router.post('/', (req, res) => { //siempre que comunicas con un servidor, hay req y resp.
-//     res.json('Desde POST')
-// })
-//Lo de arriba... lo hemos llevado a la carpeta handlers, para tener más limpio router.ts
 
 /**
  * @swagger
@@ -77,9 +72,7 @@ router.post('/',
     body('price')
         .isNumeric().withMessage('El número ha de ser numérico')
         .custom((value) => value > 0).withMessage('El número ha de ser nayor de 0'),
-
-    handleInputErrors, //es el middleware que metes para manejar los errores encontrados en body(...)
-
+    handleInputErrors, 
     createProduct)
 
 /**

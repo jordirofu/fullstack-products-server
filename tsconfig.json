@@ -1,16 +1,13 @@
-{                                   //opciones compilación typescript --> js
+{                                   
     "compilerOptions": {
-        "outDir": "./dist",         //dónde se pondrán los js compilados
-        "rootDir": "./src",         //dónde están los archivos ts a compilar
-        "lib": ["esnext", "DOM"],     //versiones de JS a la que quieras operar. "clg" petaba en index.ts hasta que añsí aqui "dOM"
-                                    //opción mejor: npm install -D @types/node  /   "lib": ["ES2022"], "types": ["node"]      // solo JS moderno
-                                    //APIs y entornos de JS... "esnext", includo futuras y experimentarles. Más estable: ES2022
-
-        "strict": true,            //si le pones any no te permitiría ningún any. Quizas bien para má adelante
-        "sourceMap": true,          //se crea un mapa para cada js...  ??
-        "esModuleInterop": true,    //para poder trabajar tanto con modules como con commonjs
+        "outDir": "./dist",         
+        "rootDir": "./src",         
+        "lib": ["esnext", "DOM"],     
+        "strict": true,            
+                "sourceMap": true,          
+        "esModuleInterop": true,    
         "declaration": true,
-        "experimentalDecorators": true, //estos dos son para q Typescript no pete con el uso de decoradores de sequelize para los modelos
+        "experimentalDecorators": true, 
         "emitDecoratorMetadata": true,
         "target": "es2020",
         "module":"commonjs"
