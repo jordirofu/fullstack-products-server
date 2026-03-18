@@ -1,7 +1,7 @@
 # Product Management API (Backend)
 
 A RESTful API for managing products, built with Node.js and Express.  
-This backend provides all CRUD operations required by the frontend application and is part of a full **PERN stack** project.
+This backend provides all CRUD operations required by the frontend application (https://products-maintenance.vercel.app) and is part of a full **PERN stack** project.
 
 The API is fully documented with Swagger, tested with integration tests, and connected to a PostgreSQL database using Sequelize ORM.
 
