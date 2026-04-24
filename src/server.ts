@@ -36,6 +36,10 @@ server.use(express.json());
 
 server.use(morgan('dev')) 
 
+server.get('/', (req, res) => {
+    res.send('Backend Product Maintenance - API is running')
+})
+
 server.use('/api/products', router); 
 
 server.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec, swaggerUiOption) )
